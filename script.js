@@ -9,14 +9,31 @@
   const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][currentTime.getMonth()];
   const year = currentTime.getFullYear();
   currentTimeElement.textContent = `${date} ${month} ${year}, ${hours}:${minutes}:${seconds}`;
-};
+}
 
-// Function to add a new reminder
+// Function to add a new reminder and compile it to the list of reminders
 document.addEventListener('DOMContentLoaded', () => {
   const reminderForm = document.getElementById('reminderForm');
   const reminderList = document.getElementById('reminderList');
-}
+  
+  //Event listener to add a new reminder when the form is submitted
+  reminderForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addReminder();
+  });
 
+  function addReminder() {
+    const medicineName = document.getElementById('medicineName').value;
+    const time = document.getElementById('time').value;
+   // console.log(medicineName);
+  //creteate a new list item and add it to the list of reminders
+    const listItem = document.createElement('li'); 
+    listItem.innerHTML = `${medicineName} at ${time} <button onclick="removeReminder(this)">Delete</button>`;
+    reminderList.appendChild(listItem); 
+
+    reminderForm.reset();
+  }
+});
 
 
 // Update the current time every second
@@ -24,5 +41,3 @@ setInterval(updateCurrentTime, 1000);
 
 // Update the current time immediately on page load
 updateCurrentTime();  
-
-g
