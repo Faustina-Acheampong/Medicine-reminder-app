@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Medicine Reminder App</title>
+</head>
+<body>
+  <div class="reminder-container">
+    <h1>Pill Pal</h1>
+    <div class="time" id="currentTime">
+        <!-- current time is displayed here -->
+    </div>
+    <form id="reminderForm">
+      <label for="medicineName">Medicine Name:</label>
+      <input type="text" id="medicineName" placeholder="Enter medicine name" required>
+      <label for="time">Time:</label>
+      <input type="time" id="time" required>
+      <button type="submit">Add Reminder</button>
+    </form>
+    <div id="reminders">
+      <h2>Reminders</h2>
+      <ul id="reminderList">
+        <!-- list of reminders is displayed here -->
+      </ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
