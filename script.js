@@ -13,11 +13,11 @@
 
 // Function to add a new reminder and compile it to the list of reminders
 document.addEventListener('DOMContentLoaded', () => {
-  const reminderForm = document.getElementById('reminderForm');
-  const reminderList = document.getElementById('reminderList');
+  const medReminderForm = document.getElementById('medReminderForm');
+  const medReminderList = document.getElementById('medReminderList');
   
   //Event listener to add a new reminder when the form is submitted
-  reminderForm.addEventListener('submit', (e) => {
+  medReminderForm.addEventListener('submit', (e) => {
     e.preventDefault();
     addReminder();
   });
@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
    // console.log(medicineName);
   //creteate a new list item and add it to the list of reminders
     const listItem = document.createElement('li'); 
-    listItem.innerHTML = `${medicineName} at ${time} <button onclick="removeReminder(this)">Delete</button>`;
-    reminderList.appendChild(listItem); 
+    listItem.innerHTML = `${medicineName} at ${time} <button onclick="removeMedReminder(this)">Delete</button>`;
+    medReminderList.appendChild(listItem); 
 
-    reminderForm.reset();
+    medReminderForm.reset();
   }
 });
 
