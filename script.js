@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const medicineName = document.getElementById('medicineName').value;
     const time = document.getElementById('time').value;
    // console.log(medicineName);
-  //creteate a new list item and add it to the list of reminders
+  //create a new list item and add it to the list of reminders
     const listItem = document.createElement('li'); 
     listItem.innerHTML = `${medicineName} at ${time} <button onclick="removeMedReminder(this)">Delete</button>`;
     medReminderList.appendChild(listItem); 
