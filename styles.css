@@ -31,3 +31,64 @@ body {
   form {
     margin-bottom: 20px;
   }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 50%;
+    padding: 10px;
+    background-color: #4895ef;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #4361ee;
+  }
+  
+  #reminders {
+    text-align: left;
+  }
+  
+  #medReminderList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #medReminderList li {
+    background-color: #e9ecef;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #medReminderList button {
+    width: 25%;
+    background-color: #dc3545;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #medReminderList button:hover {
+    background-color: #c82333;
+  }
+   
