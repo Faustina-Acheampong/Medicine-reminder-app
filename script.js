@@ -34,10 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
     medReminderForm.reset();
   }
 });
-
+  // Function to remove a reminder from the list of reminders
+  function removeMedReminder(button) {
+  const listItem = button.parentElement;
+  listItem.remove();
+}
 
 // Update the current time every second
 setInterval(updateCurrentTime, 1000);
 
 // Update the current time immediately on page load
-updateCurrentTime();  
+updateCurrentTime(); 
