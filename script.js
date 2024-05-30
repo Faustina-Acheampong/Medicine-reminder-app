@@ -31,14 +31,32 @@ document.addEventListener('DOMContentLoaded', () => {
     listItem.innerHTML = `${medicineName} at ${time} <button onclick="removeMedReminder(this)">Delete</button>`;
     medReminderList.appendChild(listItem); 
 
+   // Set up the alarm for the reminder
+    setupAlarm(time, medicineName); 
+
     medReminderForm.reset();
   }
 });
-  // Function to remove a reminder from the list of reminders
+  
   function removeMedReminder(button) {
   const listItem = button.parentElement;
   listItem.remove();
 }
+
+// Function to set up the alarm for the reminder
+function setupAlarm(time, medicineName) {
+  const [alarmHours, alarmMinutes] = time.split(':').map(Number);
+  const currentTime = new Date();
+  let alarmTime = new Date();
+  alarmTime.setHours(alarmHours, alarmMinutes, 0, 0);
+  // console.log(alarmTime);
+
+  const timeDifference = alarmTime - currentTime;
+  setTimeout(() => {
+    alert(`Time to take ${medicineName}!`);
+  }, timeDifference);
+}
+
 
 // Update the current time every second
 setInterval(updateCurrentTime, 1000);

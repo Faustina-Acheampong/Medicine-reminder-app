@@ -48,7 +48,7 @@ body {
   button {
     width: 50%;
     padding: 10px;
-    background-color: #4895ef;
+    background-color: #4361ee;
     color: white;
     border: none;
     border-radius: 5px;
@@ -56,7 +56,7 @@ body {
   }
 
   button:hover {
-    background-color: #4361ee;
+    background-color: #3f37c9;
   }
   
   #reminders {
